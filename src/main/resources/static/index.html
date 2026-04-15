@@ -87,9 +87,10 @@ function login() {
     })
     .then(res => res.text())
     .then(data => {
-        if (data === "SUCCESS") {
-            window.location.href = "dashboard.html";
-        } else {
+    	if (data === "SUCCESS") {
+    	    localStorage.setItem("email", document.getElementById("email").value);
+    	    window.location.href = "dashboard.html";
+    	        } else {
             alert("Invalid credentials");
         }
     });
