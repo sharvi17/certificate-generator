@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloController {
 
-    @GetMapping("/")
+    @GetMapping("/api/tests")
     public String home() {
         return "Backend is running successfully 🚀";
     }
